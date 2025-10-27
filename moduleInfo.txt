@@ -1,0 +1,2 @@
+[Module Name] Module Templat
+[Module Info] Add a description here please! (But only if you want too)
