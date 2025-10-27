@@ -3,10 +3,12 @@ A template for an ORSHARDS style repo, compatible with the ORSHARDS documentatio
 
 
 /lib
-- Contains the template BOM.
+
+Contains the template BOM.
 
 
 /src
+
 This contains the documentation used by builders to build the project/hardware
 
   /src/Lib - In here we have HTML files that the ORSHARDS too will display.
