@@ -1,0 +1,2 @@
+This folder contains the documents required to use the device once it is constructed. More information is provided in the template documents.
+Make sure they are written in a languages accepted where the device will be sold/used.
