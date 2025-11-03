@@ -5,11 +5,15 @@ Ideally, preparatory document such as MarkDown files should be stored in /src, a
 When writing the assembly documentation, please follow the requirments below:
 
 - The main page of the documentation MUST contain the following information:
+	- The name of the product with a unique identifier
+	- The version number of the document
+	- A time stamp corresponding to the last modification made to the documentation
+	- The names of the authors for the documentation
 	- Key functional elements 
 	- Parts and components (can be listed automatically by GitBuilding)
 	- Software needed
 	- formulations, compositions, functionalities 
-	- This shall include labelled pictorial representations (diagrams, photographs, and drawings) including sufficient explanation to understand the drawings and diagrams
+	- labelled pictorial representations (diagrams, photographs, and drawings) including sufficient explanation to understand the drawings and diagrams
 
 For CE marking please remember:
 	- Include the complete set of labels on the device in the assembly instructions, 
