@@ -8,6 +8,9 @@ The root folder must contain the following:
 	- moduleinfo.txt: this is needed by ORSHARDS to keep track of the dependencies (will be moved to /lib in future releases)
 	- RiskAssessment.txt: proposed document to track the risk assessment of the device (will be moved to /doc in future releases)
 
+/bin
+This folder contains any software that needs to be compiled during the assembly process, and software link to the hardware. 
+
 /doc
 Contains the manuals, datasheet, compliance info, risk management procedure and all static documents related to the object after it is constructed. Do NOT place anything here that relates to the contruction and deployment stages, these goes to /lib or /src.
 
@@ -25,9 +28,9 @@ This folder contains all the information needed by the assembly chain to build t
   /src/lib - This folder contains all the information already known about the parts that are to be assembled during the construction of the device. This includes the blueprints, CAD models, circuit boards, software libraries and additional technical files or artwork, and more generally all the documents mentioned by the Technology-specific Documentation Criteria as per DIN3105.
   This folder may also contain the test procedure for commissionning and performance evaluations.
   
-  /src/src - In here we have the files used to make/generate the assembly documentation, such as the MarkDown files that generate the final HTML documents after compilation.
+  /src/lib/img - In here we have any non-technical images files used to illustrate the above generation of documentation. This can include assembly steps, screen captures, small videos...
   
-  /src/img - In here we have any non-technical images files used to illustrate the above generation of documentation. This can include assembly steps, screen captures, small videos...
+  /src/src - In here we have the files used to make/generate the assembly documentation, such as the MarkDown files that generate the final HTML documents after compilation.
 
 /var
 This folder contains any non-permanent file that need to be changed during the lifetime of the device that is being constructed. This may include (but is not limited to):
