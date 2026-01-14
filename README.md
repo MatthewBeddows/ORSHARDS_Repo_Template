@@ -9,19 +9,22 @@ The root folder must contain the following:
 	- RiskAssessment.txt: proposed document to track the risk assessment of the device (will be moved to /doc in future releases)
 
 /bin
-This folder contains any software that needs to be compiled during the assembly process, and software link to the hardware. 
+This folder contains the compiled software that runs on the operating computer to interact with the device.
 
 /doc
 Contains the manuals, datasheet, compliance info, risk management procedure and all static documents related to the object after it is constructed. Do NOT place anything here that relates to the contruction and deployment stages, these goes to /lib or /src.
 
+/dev
+This folder is needed when the device is to be connected to the host computer. It contains the links to handle the hardware.
+
 /lib
-Contains all information related to pre-existing elements that are to be integrated into the device to be constructed. This package includes a template BOM, and any documentation about a sub-module can be added in a separate directory. 
-Do NOT include anythin that has to be built by the assembly chain. Any element described here should be readily available during the assembly process, similarly to a software library is available during compile time.
-This folder can also contain software needed for the device once deployed, or the test procedures to run for system monitoring or fault assessment.
+Contains all information related to pre-fabricated elements that are to be integrated into the device during its assembly. This package includes a template BOM and should also store any technical documentation about sub-modules or parts, possibly in a separate sub-directories. 
+Do NOT include anythin that has to be built during the assembly process. Any element described here should be readily available prior to the assembly process, similarly to a software library is available during compile time. This is to make sure that this folder can be used to assess dependencies for the package.
+This folder can also contain read-made software needed for the device once deployed, or standard test procedures to run for system monitoring or fault assessment.
 
 /src
-This folder contains all the information needed by the assembly chain to build the device. This usually contains documents that need to be compiled to be generated into the correct format, therefore this folder is organised into sub-directories following UNIC conventions:
-  /src/bin - contains the assembly documentation readily available to the assembly chain. The content of this document is described in more details in /src/README.md, it typically stores the HTML files that the ORSHARDS software displays in the web browser.
+This folder contains all the information needed to build the device during the assembly process. This usually contains documents that need to be compiled or processed in some ways, therefore this folder is organised into sub-directories following UNIX conventions:
+  /src/bin - contains the compiled firmware and assembly documentation readily available to the assembly process. The content of this document is described in more details in /src/README.md, it typically stores the HTML files that the ORSHARDS software displays in the web browser.
   
   /src/doc - This folder documents the processes required for the assembly and modification of the device, including maintenance. This includes the Technology-specific Documentation Criteria as per DIN3105: these are the documents that specify the requirements for each steps of the entire life cycle of the scanner. They must be properly licensed with due labelling.
   
@@ -30,10 +33,9 @@ This folder contains all the information needed by the assembly chain to build t
   
   /src/lib/img - In here we have any non-technical images files used to illustrate the above generation of documentation. This can include assembly steps, screen captures, small videos...
   
-  /src/src - In here we have the files used to make/generate the assembly documentation, such as the MarkDown files that generate the final HTML documents after compilation.
-
+  /src/src - contains all the documents that need to be compiled for the purpose of the assembly process. This includes source code for the software, but also the assembly instruction documentation if needed (for instance if you need to generate HTML files from MarkDown). Note that the compiled firmware should be stored in /src/bin, and locally-run sofware in /bin.
+ 
 /var
 This folder contains any non-permanent file that need to be changed during the lifetime of the device that is being constructed. This may include (but is not limited to):
-  User log files: activities performed by users.
-  Risk management log files: any incident to be reported for risk management.
-  Test results: log files and calibration files obtained from the tests performed during the assembly process, commissioning or maintenance of the device
+  /var/log: User log files: activities performed by users and the device, test results, calibration files obtained from the tests performed during the assembly process, commissioning or maintenance of the device, risk management log files with any incident to be reported for risk management, etc.
+  /var/tmp: temporary files that should be deleted after the completion of a task. Can be used as a buffer during deployment to make a clean process.
