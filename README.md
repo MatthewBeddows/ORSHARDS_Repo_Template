@@ -33,7 +33,7 @@ This folder contains all the information needed to build the device during the a
   
   /src/lib/img - In here we have any non-technical images files used to illustrate the above generation of documentation. This can include assembly steps, screen captures, small videos...
   
-  /src/src - contains all the documents that need to be compiled for the purpose of the assembly process. This includes source code for the software, but also the assembly instruction documentation if needed (for instance if you need to generate HTML files from MarkDown). Note that the compiled firmware should be stored in /src/bin, and locally-run sofware in /bin.
+  /src/src - contains all the documents that need to be compiled for the purpose of the assembly process. This includes source code for the software, but also the assembly instruction documentation if needed (for instance if you need to generate HTML files from MarkDown). Note that the compiled firmware should be stored in /src/bin, and locally-run sofware in /bin. Note also that this folder should include reglementation and guidelines relevant to the system assembly, as these may be seen as assembly rules similar to a Makefile for software compilation.
  
 /var
 This folder contains any non-permanent file that need to be changed during the lifetime of the device that is being constructed. This may include (but is not limited to):

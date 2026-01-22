@@ -1,8 +1,10 @@
-This folder is dedicated to the generation of the assembly files. In the context of ORSCHARDS, this is similar to the space needed to pre-compile the code before the final build. 
+This folder is dedicated to the generation of the assembly files. In the context of ORSCHARDS, this is similar to the space needed to pre-compile a code before the final build. 
 
-Ideally, preparatory document such as MarkDown files should be stored in /src, and the final instruction files should be stored in /bin.
+Ideally, preparatory document such as MarkDown files should be stored in /src/src, and the final instruction files should be stored in /src/bin.
+BOM and STL files (or similar) should be in /src/lib.
+Illustrative images should be in /src/doc/img or similar, depending on their use.
 
-When writing the assembly documentation, please follow the requirments below:
+When writing the assembly documentation, please follow the requirements below:
 
 - The main page of the documentation MUST contain the following information:
 	- The name of the product with a unique identifier
